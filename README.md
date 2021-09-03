@@ -8,9 +8,10 @@ Rails共同開発講座(5期: ふじ組)のリポジトリです。
   - 好きなメソッド: join
 - 氏名: コンフリクトくん
   - 好きなメソッド: destroy!
+- 氏名: 藤井 堪二
+  - 好きなメソッド: each
 - 氏名: コンフリクトくん2号
   - 好きなメソッド: destroy_all
-
 ## Docker操作
 ゼロからdocker環境を立ち上げる場合は、上から順にコマンドを実行すればOK
 ### docker imageのビルド
@@ -109,14 +110,14 @@ docker-compose ps
 
 #### 原因と対処法
 
-以下の方法で、yarnを再インストールしてください。（更新される様です。）  
+以下の方法で、yarnを再インストールしてください。（更新される様です。）
 ※実行前にdockerコンテナを`docker-compose stop`で落としてください。
 ```
 $ docker-compose run --rm web yarn install
 ```
 
-※実行後に、もし正常に起動していないようでしたら  
+※実行後に、もし正常に起動していないようでしたら
 　dockerコンテナ削除後に、`docker-compose up`で再度起動してください。
 
-[この問題についての詳細はこちら]  
+[この問題についての詳細はこちら]
 https://qiita.com/yama_ryoji/items/1de1f2e9e206382c4aa5
