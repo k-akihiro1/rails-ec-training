@@ -1,3 +1,3 @@
 class UserClassification < ApplicationRecord
-    belongs_to :user_classifications
+    belongs_to :user
 end
