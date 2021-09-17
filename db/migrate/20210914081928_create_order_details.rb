@@ -3,7 +3,7 @@ class CreateOrderDetails < ActiveRecord::Migration[6.0]
     create_table :order_details do |t|
       t.string :order_detail_number
       t.integer :order_quantity
-      t.timestamp :shipment_date
+      t.datetime :shipment_date
 
       t.timestamps
       t.references :order, null: false, foreign_key: true
