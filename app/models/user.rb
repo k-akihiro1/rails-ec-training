@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-    has_many :user_classifications, dependent: :destroy
+    belongs_to :user_classification
 end
