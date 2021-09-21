@@ -5,7 +5,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :order_number, limit: 16
 
       t.timestamps
-      # t.references :user, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
     end
   end
 end
