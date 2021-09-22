@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.references :sale_status, foreign_key: true
       t.references :category, foreign_key: true
       t.references :product_status, foreign_key: true
-      # t.references :user, foreign_key: true
+      t.references :user, foreign_key: true
       t.integer :price, null: false
       t.boolean :delete_flag, limit: 1, null: false
       t.timestamp :regist_date
