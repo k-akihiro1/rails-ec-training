@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 2021_09_14_081928) do
 
   create_table "order_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "order_detail_number"
+    t.string "order_detail_number", limit: 64
     t.integer "order_quantity"
-    t.timestamp "shipment_date"
+    t.datetime "shipment_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "order_id", null: false
@@ -25,14 +25,16 @@ ActiveRecord::Schema.define(version: 2021_09_14_081928) do
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.timestamp "order_date"
-    t.string "order_number"
+    t.datetime "order_date"
+    t.string "order_number", limit: 16
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "shipment_statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "shipment_status_name"
+    t.string "shipment_status_name", limit: 32
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -64,5 +66,6 @@ ActiveRecord::Schema.define(version: 2021_09_14_081928) do
 
   add_foreign_key "order_details", "orders"
   add_foreign_key "order_details", "shipment_statuses"
+  add_foreign_key "orders", "users"
   add_foreign_key "users", "user_classifications"
 end
