@@ -51,7 +51,7 @@ Purchase.create!(
   purchase_company: "探求学園１",
   order_date: "2021/10/1",
   purchase_date: "2021/11/1",
-  product_id:  1
+  product_id: 1
 )
 Purchase.create!(
   purchase_price: "2000",
@@ -67,7 +67,7 @@ Purchase.create!(
   purchase_company: "探求学園3",
   order_date: "2021/10/3",
   purchase_date: "2021/11/3",
-  product_id:  3
+  product_id: 3
 )
 Purchase.create!(
   purchase_price: "4000",
