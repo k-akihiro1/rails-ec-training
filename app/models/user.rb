@@ -10,6 +10,6 @@ class User < ApplicationRecord
         validates :address, length: { maximum: 15 }
         validates :apartments, length: { maximum: 20 }
         validates :email, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
-        validates :phone_number, format: { with: /\A[0-9]+\z/ }, length: { maximum: 15 }
+        validates :phone_number, format: { with: /\A\d\z/ }, length: { maximum: 15 }
     end
 end
