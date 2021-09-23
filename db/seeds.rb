@@ -83,9 +83,9 @@ Purchase.create!(
 }
 
 ["販売中","欠品中"].each {|status|
-  SaleStatus.craete!(sale_status: status)
+  SaleStatus.craete!(sale_status_name: status)
 }
 
 ["新品","中古"].each {|status|
-  ProductStatus.craete!(product_status: status)
+  ProductStatus.craete!(product_status_name: status)
 }
