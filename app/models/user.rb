@@ -12,4 +12,5 @@ class User < ApplicationRecord
       validates :email,  uniqueness: true,  format:  { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
       validates :phone_number,  format: { with: /\A\d+\z/ }, length: { maximum: 15 }
     end
+    has_many :products
 end
