@@ -2,7 +2,7 @@
 Product.create!(
   product_name: "商品１",
   category_id: 1,
-  price: "10000",
+  price: 10000,
   description: "人気商品１",
   sale_status_id: 1,
   product_status_id: 1,
@@ -46,32 +46,32 @@ Product.create!(
 
 # Purchases
 Purchase.create!(
-  purchase_price: "1000",
-  purchase_quanitity: "1",
+  purchase_price: 1000,
+  purchase_quanitity: 1,
   purchase_company: "探求学園１",
   order_date: "2021/10/1",
   purchase_date: "2021/11/1",
   product_id: 1
 )
 Purchase.create!(
-  purchase_price: "2000",
-  purchase_quanitity: "2",
+  purchase_price: 2000,
+  purchase_quanitity: 2,
   purchase_company: "探求学園2",
   order_date: "2021/10/2",
   purchase_date: "2021/11/2",
   product_id: 2
 )
 Purchase.create!(
-  purchase_price: "3000",
-  purchase_quanitity: "3",
+  purchase_price: 3000,
+  purchase_quanitity: 3,
   purchase_company: "探求学園3",
   order_date: "2021/10/3",
   purchase_date: "2021/11/3",
   product_id: 3
 )
 Purchase.create!(
-  purchase_price: "4000",
-  purchase_quanitity: "4",
+  purchase_price: 4000,
+  purchase_quanitity: 4,
   purchase_company: "探求学園４",
   order_date: "2021/10/4",
   purchase_date: "2021/11/4",
