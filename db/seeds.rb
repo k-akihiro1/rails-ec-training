@@ -87,5 +87,5 @@ Purchase.create!(
 }
 
 ["新品","中古"].each {|status|
-  ProductStatus.craete!(category_name: status)
+  ProductStatus.craete!(product_status: status)
 }
