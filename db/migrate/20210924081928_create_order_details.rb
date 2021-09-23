@@ -8,7 +8,7 @@ class CreateOrderDetails < ActiveRecord::Migration[6.0]
       t.timestamps
       t.references :order, null: false, foreign_key: true
       t.references :shipment_status, null: false, foreign_key: true
-      # t.references :product, null: false, foreign_key: true
+      t.references :product, null: false, foreign_key: true
     end
   end
 end
