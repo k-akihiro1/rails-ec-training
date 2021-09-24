@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-    belongs_to :user_classification
     with_options presence: true do
       validates :password,  format: { with: /\A[a-z0-9]+\z/i },  length: { in: 6..15 }
       validates :last_name,  length: { maximum: 10 }
@@ -12,4 +11,5 @@ class User < ApplicationRecord
       validates :email,  uniqueness: true,  format:  { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
       validates :phone_number,  format: { with: /\A\d+\z/ }, length: { maximum: 15 }
     end
+    belongs_to :user_classification
 end
