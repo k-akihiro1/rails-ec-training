@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 2021_09_24_081928) do
     t.bigint "sale_status_id"
     t.bigint "category_id"
     t.bigint "product_status_id"
-    t.bigint "user_id"
     t.integer "price", null: false
     t.boolean "delete_flag", null: false
     t.timestamp "regist_date"
@@ -62,7 +61,6 @@ ActiveRecord::Schema.define(version: 2021_09_24_081928) do
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["product_status_id"], name: "index_products_on_product_status_id"
     t.index ["sale_status_id"], name: "index_products_on_sale_status_id"
-    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "purchases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -119,7 +117,6 @@ ActiveRecord::Schema.define(version: 2021_09_24_081928) do
   add_foreign_key "products", "categories"
   add_foreign_key "products", "product_statuses"
   add_foreign_key "products", "sale_statuses"
-  add_foreign_key "products", "users"
   add_foreign_key "purchases", "products"
   add_foreign_key "users", "user_classifications"
 end
