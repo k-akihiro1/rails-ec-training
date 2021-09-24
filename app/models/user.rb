@@ -8,7 +8,7 @@
     validates :municipality, length: { maximum: 10 }
     validates :address, length: { maximum: 15 }
     validates :apartments, length: { maximum: 20 }
-    validates :email, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/ }
+    validates :email, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
     validates :phone_number, format: { with: /\A\d+\z/ }, length: { maximum: 15 }
   end
   belongs_to :user_classification
