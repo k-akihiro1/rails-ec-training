@@ -13,7 +13,6 @@ User.create!(
   address: "1-11",
   apartments: "幟町マンション　101号室",
   email: "1234abcd@example.com",
-binding.pry
   phone_number: "0123456789",
   user_classification_id: 1,
   company_name: "一郎カンパニー",
@@ -35,7 +34,19 @@ User.create!(
   delete_flag: false
 )
 
-# Peroducts
+# Products
+["専門書","小説"].each {|category|
+  Category.craete!(category_name: category)
+}
+
+["販売中","欠品中"].each {|status|
+  SaleStatus.craete!(sale_status_name: status)
+}
+
+["新品","中古"].each {|status|
+  ProductStatus.craete!(product_status_name: status)
+}
+
 Product.create!(
   product_name: "商品１",
   category_id: 1,
@@ -84,7 +95,7 @@ Product.create!(
 # Purchases
 Purchase.create!(
   purchase_price: 1000,
-  purchase_quanitity: 1,
+  purchase_quantity: 1,
   purchase_company: "探求学園１",
   order_date: "2021/10/1",
   purchase_date: "2021/11/1",
@@ -92,7 +103,7 @@ Purchase.create!(
 )
 Purchase.create!(
   purchase_price: 2000,
-  purchase_quanitity: 2,
+  purchase_quantity: 2,
   purchase_company: "探求学園2",
   order_date: "2021/10/2",
   purchase_date: "2021/11/2",
@@ -100,7 +111,7 @@ Purchase.create!(
 )
 Purchase.create!(
   purchase_price: 3000,
-  purchase_quanitity: 3,
+  purchase_quantity: 3,
   purchase_company: "探求学園3",
   order_date: "2021/10/3",
   purchase_date: "2021/11/3",
@@ -108,21 +119,9 @@ Purchase.create!(
 )
 Purchase.create!(
   purchase_price: 4000,
-  purchase_quanitity: 4,
+  purchase_quantity: 4,
   purchase_company: "探求学園４",
   order_date: "2021/10/4",
   purchase_date: "2021/11/4",
   product_id: 4
 )
-
-["専門書","小説"].each {|category|
-  Category.craete!(category_name: category)
-}
-
-["販売中","欠品中"].each {|status|
-  SaleStatus.craete!(sale_status_name: status)
-}
-
-["新品","中古"].each {|status|
-  ProductStatus.craete!(product_status_name: status)
-}

@@ -1,4 +1,4 @@
-  class User < ApplicationRecord
+class User < ApplicationRecord
   with_options presence: true do
     validates :password, format: { with: /\A[a-z0-9]+\z/ }, length: { in: 6..15 }
     validates :last_name, length: { maximum: 10 }
@@ -13,4 +13,4 @@
   end
   belongs_to :user_classification
   has_many :products
-  end
+end
