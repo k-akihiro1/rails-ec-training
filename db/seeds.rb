@@ -27,24 +27,24 @@ User.create!(
   municipality: "台東区",
   address: "1-11",
   apartments: "台東マンション　102号室",
-  email: "abcd1234@example.com",
+  email: "abcd5678@example.com",
   phone_number: "987654321",
   user_classification_id: 1,
-  company_name: "2郎カンパニー",
+  company_name: "二郎カンパニー",
   delete_flag: false
 )
 
 # Products
 ["専門書","小説"].each {|category|
-  Category.craete!(category_name: category)
+  Category.create!(category_name: category)
 }
 
 ["販売中","欠品中"].each {|status|
-  SaleStatus.craete!(sale_status_name: status)
+  SaleStatus.create!(sale_status_name: status)
 }
 
 ["新品","中古"].each {|status|
-  ProductStatus.craete!(product_status_name: status)
+  ProductStatus.create!(product_status_name: status)
 }
 
 Product.create!(

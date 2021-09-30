@@ -12,5 +12,6 @@ class User < ApplicationRecord
     validates :phone_number, format: { with: /\A\d+\z/ }, length: { maximum: 15 }
   end
   belongs_to :user_classification
-  has_many :products
+  has_many :products, dependent: :destroy
+  has_many :orders, dependent: :destroy
 end
