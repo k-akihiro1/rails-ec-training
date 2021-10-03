@@ -116,7 +116,7 @@ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwr
   <main>
     <div class="container">
       <div class="mt-5 jumbotron bg-white">
-        <%if @product.present? %>
+        <% if @product.present? %>
           <h1 class="text-center">商品情報</h1>
           <h2 class="text-center"><%= @product.product_name %></h2>
           <div class="offset-sm-3">
@@ -141,7 +141,7 @@ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwr
             <p class="mt-5">商品検索画面に戻り、やり直してください</p>
             <button type="button" class="btn btn-primary">商品検索画面へ</button>
           </div>
-        <%end%>
+        <% end %>
       </div>
     </div>
   </main>
