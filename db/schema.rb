@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_24_081928) do
+ActiveRecord::Schema.define(version: 2021_10_01_141727) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "category_name", limit: 32
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 2021_09_24_081928) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "password", limit: 64, null: false
+    t.string "password_digest", limit: 64, null: false
     t.string "last_name", limit: 16, null: false
     t.string "first_name", limit: 16, null: false
     t.string "zipcode", limit: 16
