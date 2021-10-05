@@ -13,4 +13,7 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to "/logout"
   end
+  
+  def new
+  end
 end
