@@ -10,6 +10,6 @@ class SessionsController < ApplicationController
 
       def destroy
         log_out if logged_in?
-        redirect_to "/new"
+        redirect_to "/login" to: 'sessions#new'
       end
     end
