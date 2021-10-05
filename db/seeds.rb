@@ -92,13 +92,13 @@ Purchase.create!(
 
 #Orders
 Order.create!(
-  order_date: 2021-10-01 12:32:42,
+  order_date: Time.zone.parse('20021-10-01 12:32:42'),
   order_number: “1”,
   user_id: 1
 )
 
 Order.create!(
-  order_date: 2021-10-2 10:25:32,
+  order_date: Time.zone.parse('2021-10-02 10:25:32'),
   order_number: “2”,
   user_id: 2
 )
@@ -106,7 +106,7 @@ Order.create!(
 OrderDetail.create!(
    order_detail_number: ”1”,
    order_quantity: 1,
-   shipment_date: 2021-10-2 11:22:33,
+   shipment_date: Time.zone.parse('2021-10-02 11:22:33'),
    product_id: 1,
    order_id: 1,
    shipment_status_id: 1
@@ -115,7 +115,7 @@ OrderDetail.create!(
 OrderDetail.create!(
      order_detail_number: ”2”,
      order_quantity: 1,
-     shipment_date: 2021-10-2 11:22:33,
+     shipment_date: Time.zone.parse('2021-10-02 11:22:33'),
      product_id: 2,
      order_id: 1,
      shipment_status_id: 1
@@ -125,7 +125,7 @@ OrderDetail.create!(
 OrderDetail.create!(
      order_detail_number: ”3”,
      order_quantity: 1,
-     shipment_date: 2021-10-2 11:22:33,
+     shipment_date: Time.zone.parse('2021-10-02 11:22:33'),
      product_id: 3,
      order_id: 1,
      shipment_status_id: 1
@@ -134,7 +134,7 @@ OrderDetail.create!(
 OrderDetail.create!(
    order_detail_number: ”4”,
    order_quantity: 1,
-   shipment_date: 2021-10-2 11:22:33,
+   shipment_date: Time.zone.parse('2021-10-02 11:22:33'),
    product_id: 4,
    order_id: 1,
    shipment_status_id: 1
@@ -143,7 +143,7 @@ OrderDetail.create!(
 OrderDetail.create!(
    order_detail_number: ”5”,
    order_quantity: 1,
-   shipment_date: 2021-10-3 12:22:33,
+   shipment_date: Time.zone.parse('2021-10-03 12:22:33'),
    product_id: 5,
    order_id: 2,
    shipment_status_id: 2
@@ -151,7 +151,7 @@ OrderDetail.create!(
 OrderDetail.create!(
    order_detail_number: ”6”,
    order_quantity: 1,
-   shipment_date: 2021-10-3 12:22:33,
+   shipment_date: Time.zone.parse('2021-10-03 12:22:33'),
    product_id: 6,
    order_id: 2,
    shipment_status_id: 2
@@ -160,7 +160,7 @@ OrderDetail.create!(
 OrderDetail.create!(
      order_detail_number: ”7”,
      order_quantity: 1,
-     shipment_date: 2021-10-3 12:22:33,
+     shipment_date: Time.zone.parse('2021-10-03 12:22:33'),
      product_id: 7,
      order_id: 2,
      shipment_status_id: 2
@@ -169,7 +169,7 @@ OrderDetail.create!(
 OrderDetail.create!(
    order_detail_number: ”8”,
    order_quantity: 1,
-   shipment_date: 2021-10-3 12:22:33,
+   shipment_date: Time.zone.parse('2021-10-03 12:22:33'),
    product_id: 8,
    order_id: 2,
    shipment_status_id: 2
