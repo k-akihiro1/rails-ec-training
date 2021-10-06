@@ -202,7 +202,7 @@ sans-serif;
             パスワード<br>（再入力）</br>
           </td>
           <td colspan="2">
-            <%= form.password_field :password %>
+            <%= form.password_field :password_confirmations %>
           </td>
         </tr>
       </table>
@@ -211,11 +211,8 @@ sans-serif;
         <div class="col-5">
           <div class="d-flex justify-content-end">
             <button class="btn btn-primary" type="submit">修正</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-5 offset-2">
-        <button class="btn btn-danger" type="submit">退会</button>
+          <div class="col-5 offset-2">
+            <button class="btn btn-danger" type="submit">退会</button>
       </div>
     <% end %>
     </div>
