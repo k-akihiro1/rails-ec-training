@@ -120,9 +120,7 @@ sans-serif;
             氏名<span style="float: right">姓</span>
           </td>
           <td>
-            <%form.label :first_name, class: "mb-0" %>
             <%= form.text_field :first_name %>
-            <%form.label :last_name, class: "mb-0" %>
             <%= form.text_field :last_name %>
           </td>
         </tr>
@@ -132,7 +130,6 @@ sans-serif;
             住所<span style="float: right">〒</span>
           </td>
           <td colspan="2">
-            <%form.label :zipcode, class: "mb-0" %>
             <%= form.text_field :zipcode %>
           </td>
         </tr>
@@ -142,7 +139,6 @@ sans-serif;
             都道府県
           </td>
           <td colspan="2">
-           <%form.label :prefecture, class: "mb-0" %>
            <%= form.text_field :prefecture %>
           </td>
         </tr>
@@ -152,7 +148,6 @@ sans-serif;
             市町村区
           </td>
           <td colspan="2">
-            <%form.label :municipality, class: "mb-0" %>
             <%= form.text_field :municipality %>
           </td>
         </tr>
@@ -162,7 +157,6 @@ sans-serif;
             番地
           </td>
           <td colspan="2">
-            <%form.label :address, class: "mb-0" %>
             <%= form.text_field :address %>
           </td>
         </tr>
@@ -172,7 +166,6 @@ sans-serif;
             マンション<br>部屋番号</br>
           </td>
           <td colspan="2">
-            <%form.label :apartments, class: "mb-0" %>
             <%= form.text_field :apartments %>
           </td>
         </tr>
@@ -182,7 +175,6 @@ sans-serif;
             メールアドレス
           </td>
           <td colspan="2">
-            <%form.label :email, class: "mb-0" %>
             <%= form.text_field :email %>
           </td>
         </tr>
@@ -192,8 +184,25 @@ sans-serif;
             電話番号
           </td>
           <td colspan="2">
-            <%form.label :phone_number, class: "mb-0" %>
             <%= form.text_field :phone_number %>
+          </td>
+        </tr>
+
+        <tr height="40">
+          <td align="center">
+            パスワード
+          </td>
+          <td colspan="2">
+            <%= form.password_field :password %>
+          </td>
+        </tr>
+
+        <tr height="40">
+          <td align="center">
+            パスワード<br>（再入力）</br>
+          </td>
+          <td colspan="2">
+            <%= form.password_field :password %>
           </td>
         </tr>
       </table>
@@ -205,10 +214,10 @@ sans-serif;
           </div>
         </div>
       </div>
-    <% end %>
       <div class="col-5 offset-2">
         <button class="btn btn-danger" type="submit">退会</button>
       </div>
+    <% end %>
     </div>
   </main>
   <footer>
