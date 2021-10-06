@@ -60,73 +60,57 @@
         </tr>
 
         <tr height="40">
-          <td align="right">
-            都道府県
-          </td colspan="2">
-          <td>
+          <td colspan="2">
+            <%= form.label :prefecture, "都道府県" %>
             <%= form.text_field :prefecture %>
           </td>
         </tr>
 
         <tr height="40">
-          <td align="right">
-            市町村区
-          </td>
           <td>
+            <%= form.label :municipality, "市町村区" %>
             <%= form.text_field :municipality %>
           </td>
         </tr>
 
         <tr height="40">
-          <td align="right">
-            番地
-          </td>
           <td>
+            <%= form.label :address, "番地" %>
             <%= form.text_field :address %>
           </td>
         </tr>
 
         <tr height="40">
-          <td align="right">
-            マンション 部屋番号
-          </td>
           <td>
+            <%= form.label :apartments, "マンション　部屋番号" %>
             <%= form.text_field :apartments %>
           </td>
         </tr>
 
         <tr height="40">
-          <td align="center">
-            メールアドレス
-          </td>
           <td>
+            <%= form.label :email, "メールアドレス" %>
             <%= form.text_field :email %>
           </td>
         </tr>
 
         <tr height="40">
-          <td align="center">
-            電話番号
-          </td>
           <td>
+            <%= form.label :phone_number, "電話番号" %>
             <%= form.text_field :phone_number %>
           </td>
         </tr>
 
         <tr height="40">
-          <td align="center">
-            パスワード
-          </td>
           <td>
+            <%= form.label :password, "パスワード" %>
             <%= form.password_field :password %>
           </td>
         </tr>
 
         <tr height="40">
-          <td align="center">
-            パスワード（再入力）
-          </td>
           <td>
+            <%= form.label :zipcode, "パスワード（再入力）" %>
             <%= form.password_field :password_confirmations %>
           </td>
         </tr>
@@ -144,7 +128,6 @@
         </div>
       </div>
     <% end %>
-    </div>
   </main>
   <footer>
     <h1>探求学園Rails専攻</h1>
