@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get 'products/show'
   get 'products/index'
+  get 'products/search'
 end

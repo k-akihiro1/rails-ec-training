@@ -4,8 +4,12 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @product = Product.all.page(params[:page]).per(8).order('created_at DESC')
-    # ↓はindex.htmlのuf文を機能させるための仮です
-    @product = Product.find_by(id: params[:id])
+    @products = Product.all.page(params[:page]).per(8).order('created_at DESC')
+  end
+
+  def search
+    @product = Product.search(params[:search])
+    @search = params[:search]
+    render "index"
   end
 end
