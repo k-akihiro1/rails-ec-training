@@ -65,7 +65,6 @@
       </div>
     </div>
 
-    <% if @products.present? %>
       <div class="container">
         <p>全150件</p>
         <table class="table table-hover" border="1" style="border-collapse: collapse">
@@ -84,6 +83,7 @@
             </tr>
           </thead>
           <tbody>
+        <% if @products.present? %>
           <% @products.each do |product| %>
             <tr>
               <td scope="row">
@@ -102,37 +102,24 @@
           <% end %>
           </tbody>
         </table>
-      </div>
 
-      <div class="container">
-        <nav aria-label="...">
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-          </ul>
-        </nav>
-      </div>
-      <%= paginate @products %>
+        <div class="container">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+              <li class="page-item active">
+                <a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </nav>
+        </div>
+        <%= paginate @products %>
 
-    <% else %>
-      <div class="container">
-        <p>全0件</p>
-        <table class="table table-hover" border="1" style="border-collapse: collapse">
-          <thead>
-            <tr>
-              <th class="text-left" width="55%">商品名</th>
-              <th class="text-center" width="15%">商品カテゴリ</th>
-              <th class="text-center" width="15%">価格</th>
-              <th class="text-center" width="15%"></th>
-            </tr>
-          </thead>
-        </table>
+      <% else %>
         <h2 class="text-center">検索結果がありませんでした</h2>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </main>
   <footer>
     <h1>探求学園Rails専攻</h1>
