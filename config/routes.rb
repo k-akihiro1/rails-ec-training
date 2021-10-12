@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'orders/show'
+  resources :orders
   resources :users
   get    '/login',   to: 'sessions#new'
   post   '/login', to: 'sessions#create'
