@@ -126,8 +126,6 @@ Purchase.create!(
   product_id: 4
 )
 
-
-
 #Orders
 Order.create!(
   order_date: Time.zone.parse('2021-10-01 12:32:42'),
