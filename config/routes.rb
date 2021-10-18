@@ -5,6 +5,4 @@ Rails.application.routes.draw do
   post   '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   resources :products
-  get '/show', to: 'sessions#show'
-  get '/index', to: 'sessions#index'
 end

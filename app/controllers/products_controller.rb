@@ -4,6 +4,6 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all.page(params[:page]).per(8).order('created_at DESC')
+    @products = Product.all.page(params[:page]).per(15).order('created_at DESC')
   end
 end
