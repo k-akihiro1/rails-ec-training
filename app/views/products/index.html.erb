@@ -19,7 +19,7 @@
             <p>〇〇 ××さん</p>
           </ul>
           <ul class="navbar-nav">
-            <a class="nav-link text-dark" href="#">商品検索</a>
+            <%= link_to "商品検索", products_path, class: "nav-link text-dark" %>
             <a class="nav-link text-dark" href="#">カート</a>
             <a class="nav-link text-dark" href="#">注文履歴</a>
             <a class="nav-link text-dark" href="#">ユーザ情報</a>
@@ -96,7 +96,7 @@
                   <%= product.price %>円
                 </td>
                 <td class="text-center">
-                  <a href="#" class="btn btn-primary btn-sm">商品詳細</a>
+                  <%= link_to "商品詳細", product_path(product), class: "btn btn-primary btn-sm" %>
                 </td>
               </tr>
             <% end %>
