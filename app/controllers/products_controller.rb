@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   end
 
   def search
-    @product = Product.search(params[:search])
+    @products = Product.search(params[:search])
     @search = params[:search]
     render "index"
   end
