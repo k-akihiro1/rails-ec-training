@@ -4,12 +4,6 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all.page(params[:page]).per(8).order('created_at DESC')
-  end
-
-  def search
-    @product = Product.search(params[:search])
-    @search = params[:search]
-    render "index"
+    @products = Product.all.page(params[:page]).per(15).order('created_at DESC')
   end
 end
