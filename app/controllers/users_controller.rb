@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:success] = "ユーザー情報の更新終了しました。"
     else
       flash[:error] = "ユーザー情報を更新できませんでした。。"
-      render 'edit'
+      render :edit
     end
   end
 
