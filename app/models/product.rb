@@ -5,7 +5,7 @@ class Product < ApplicationRecord
   belongs_to :category
   has_many :purchases, dependent: :destroy
   def self.search(search)
-    if search
+    if search.present?
       Product.where(['product_name LIKE ?', "%#{search}%"])
     else
       Product.all
