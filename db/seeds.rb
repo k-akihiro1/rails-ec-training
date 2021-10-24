@@ -1,6 +1,6 @@
 # Users
 UserClassification.create!(
-  user_classification_name: "通常会員"
+  user_classification_name: "通常会員",
 )
 
 User.create!(
@@ -16,7 +16,7 @@ User.create!(
   phone_number: "0123456789",
   user_classification_id: 1,
   company_name: "一郎カンパニー",
-  delete_flag: false
+  delete_flag: false,
 )
 User.create!(
   password: "abcd1234",
@@ -31,19 +31,19 @@ User.create!(
   phone_number: "987654321",
   user_classification_id: 1,
   company_name: "二郎カンパニー",
-  delete_flag: false
+  delete_flag: false,
 )
 
 # Products
-["専門書","小説"].each {|category|
+["専門書", "小説"].each {|category|
   Category.create!(category_name: category)
 }
 
-["販売中","欠品中"].each {|status|
+["販売中", "欠品中"].each {|status|
   SaleStatus.create!(sale_status_name: status)
 }
 
-["新品","中古"].each {|status|
+["新品", "中古"].each {|status|
   ProductStatus.create!(product_status_name: status)
 }
 
@@ -99,7 +99,7 @@ Purchase.create!(
   purchase_company: "探求学園１",
   order_date: "2021/10/1",
   purchase_date: "2021/11/1",
-  product_id: 1
+  product_id: 1,
 )
 Purchase.create!(
   purchase_price: 2000,
@@ -107,7 +107,7 @@ Purchase.create!(
   purchase_company: "探求学園2",
   order_date: "2021/10/2",
   purchase_date: "2021/11/2",
-  product_id: 2
+  product_id: 2,
 )
 Purchase.create!(
   purchase_price: 3000,
@@ -115,7 +115,7 @@ Purchase.create!(
   purchase_company: "探求学園3",
   order_date: "2021/10/3",
   purchase_date: "2021/11/3",
-  product_id: 3
+  product_id: 3,
 )
 Purchase.create!(
   purchase_price: 4000,
@@ -123,7 +123,7 @@ Purchase.create!(
   purchase_company: "探求学園４",
   order_date: "2021/10/4",
   purchase_date: "2021/11/4",
-  product_id: 4
+  product_id: 4,
 )
 
 #Orders
