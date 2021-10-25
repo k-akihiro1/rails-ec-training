@@ -14,8 +14,8 @@
             <div class="navbar-nav me-auto">
               <h1><a class="nav-link navbar-brand" href="#">探求学園Rails専攻</a></h1>
             </div>
-            <% if logged_in? %>
-              <div>
+            <div>
+              <% if logged_in? %>
                 <ul>
                   <p>〇〇 ××さん</p>
                 </ul>
@@ -26,30 +26,26 @@
                   <a class="nav-link text-dark" href="#">ユーザ情報</a>
                   <a class="nav-link text-dark" href="#">ログアウト</a>
                 </ul>
-              </div>
-            <% else %>
-              <div>
+              <% else %>
                 <ul>
                   <li>
                     <a class="text-dark" href="#"> ログイン </a>
                     <a class="text-dark" href="#"> 新規登録 </a>
                   </li>
                 </ul>
-              </div>
-            <% end %>
+              <% end %>
+            </div>
           </div>
         </nav>
       </header>
-      <% if logged_in? %>
-        <main>
+      <main>
+        <% if logged_in? %>
           <h1 class="mt-5 text-center">探求学園Rails専攻 ECサイト</h1>
           <div class="text-center mt-4">
             <p>ご利用いただき、ありがとうございます<br>
               右上のメニューから商品を検索したり、注文したりできます</p>
           </div>
-        </main>
-      <% else %>
-        <main>
+        <% else %>
           <h1 class="mt-5 text-center">探求学園Rails専攻 ECサイト</h1>
           <div class="row d-flex justify-content-center align-items-center">
             <div class="mt-3 mr-3 text-center col-sm-3">
@@ -66,8 +62,8 @@
             </p>
             <%= link_to "ログイン", login_path, class: "btn btn-primary" %>
           </div>
-        </main>
-      <% end %>
+        <% end %>
+      </main>
     </body>
   <footer>
     <h1>探求学園Rails専攻</h1>
