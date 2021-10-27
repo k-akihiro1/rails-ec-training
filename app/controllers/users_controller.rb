@@ -7,14 +7,17 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
-    if @user.save
+    @user = User.new(user_params)
+    @user.user_classification_id = 1
+
+    if @user.save!
       flash[:success] = "登録完了しました。"
-      redirect_to @user
+      redirect_to login_path
     else
       render 'new'
       flash[:error] = "登録失敗しました。"
     end
+  end
 
   private
 
@@ -29,8 +32,9 @@ class UsersController < ApplicationController
         :apartments,
         :email,
         :phone_number,
-        :password
+        :password,
+        :password_confirmation
       )
     end
-  end
+
 end

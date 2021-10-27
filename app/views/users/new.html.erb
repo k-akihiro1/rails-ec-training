@@ -80,28 +80,28 @@
           <div>
             <%= form.label :phone_number, "電話番号" %>
             <div class="ml-3 mr-5 ms-4">
-              <%= form.text_field :phone_number, pattern: "[1-9][0-9]*", maxlength: "15" %>
+              <%= form.text_field :phone_number %>
             </div>
           </div>
           <div>
             <%= form.label :password, "パスワード" %>
             <div class="col-sm-8 ms-4">
-              <%= form.password_field :password, pattern: "^[0-9A-Za-z]+$", minlength: '6', maxlength: '15' %>
+              <%= form.password_field :password %>
             </div>
           </div>
           <div>
             <%= form.label :zipcode, "パスワード再入力" %>
             <div class="col-sm-8 ms-4">
-              <%= form.password_field :password_confirmations, pattern: "^[0-9A-Za-z]+$", minlength: '6', maxlength: '15' %>
+              <%= form.password_field :password_confirmation %>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-sm-2 mt-5">
-              <%= link_to "登録", users_path, method: :create, class: "btn btn-primary" %>
+              <%= form.submit "登録", class: "btn btn-primary" %>
             </div>
           </div>
           <div class="mt-5 text-center">
-            <%= link_to "ログインはこちらから", login_path, method: :create %>
+            <%= link_to "ログインはこちらから", login_path %>
           </div>
         </div>
       </div>
