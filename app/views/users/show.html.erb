@@ -120,7 +120,7 @@ sans-serif;
                 ユーザID
               </td>
               <td>
-                User
+                <%= @user.user_classification_id %>
               </td>
             </tr>
 
@@ -139,7 +139,7 @@ sans-serif;
               </td>
               <td>
                 〒 <%= @user.zipcode %> <br>
-                沖縄県那覇市<%= @user.address %>
+                <%= @user.prefecture %><%= @user.municipality %><%= @user.address %><%= @user.apartments %>
               </td>
             </tr>
             <tr>
