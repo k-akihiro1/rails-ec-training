@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user.user_classification_id = 1
 
     if @user.save!
-      flash[:success] = "登録完了しました。"
+      flash[:success] = "ユーザーを登録しました。こちらからログインしてください。"
       redirect_to login_path
     else
       render 'new'
