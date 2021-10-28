@@ -24,8 +24,18 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "ユーザー情報の更新終了しました。"
+      redirect_to @user
+    else
+      flash[:error] = "ユーザー情報を更新できませんでした。"
+      render :edit
+    end
+  end
 
+  private
     def user_params
       params.require(:user).permit(
         :first_name,
@@ -41,6 +51,5 @@ class UsersController < ApplicationController
         :password_confirmation
       )
     end
-
 
 end
