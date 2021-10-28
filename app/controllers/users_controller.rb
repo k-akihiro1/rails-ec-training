@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
+    if @user.update_attributes(user_params)
       flash[:success] = "ユーザー情報の更新終了しました。"
       redirect_to @user
     else
