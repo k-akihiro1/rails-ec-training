@@ -95,7 +95,7 @@
                 </td>
               </tr>
             <% end %>
-      
+
           <% else %>
             <h2 class="text-center">検索結果がありませんでした</h2>
           <% end %>
@@ -106,10 +106,7 @@
       <%= paginate @products %>
     </div>
   </main>
-  <footer>
-    <h1>探求学園Rails専攻</h1>
-    <p>© 2020 QuestAcademia, All rights reserved</p>
-  </footer>
+    <%= render 'layouts/footer' %>
 </body>
 
 </html>
