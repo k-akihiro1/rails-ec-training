@@ -31,10 +31,10 @@ module SessionsHelper
     end
 
     def correct_user
-      flash[:not_login] = "他人の情報にアクセスすることはできません。。"
-      @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user)
+      user = User.find(params[:id])
+      unless current_user?(user)
+        redirect_to root_path
+        flash[:danger] = "他人の情報にアクセスすることはできません。。"
+      end
     end
-
-
 end
