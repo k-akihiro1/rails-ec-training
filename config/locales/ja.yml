@@ -25,15 +25,23 @@ ja:
         apartments: マンション、部屋番号
         email: メールアドレス
         phone_number: 電話番号
+        user_classification_id: ユーザー種別
+        company_name: 会社名
+        delete_flag: deleteフラグ
+
 
       user_classification:
         user_classification_name: ユーザー種別名
 
       product:
         product_name: 商品名
+        category_id: カテゴリーID
         price: 販売単価
         description: 商品説明
+        sale_status_id: 販売状態
+        product_status_id: 商品状態
         regist_date: 商品登録日
+        user_id: ユーザーID
         delete_flag: deleteフラグ
 
       product_status:
@@ -46,6 +54,7 @@ ja:
         category_name: カテゴリー名
 
       order:
+        user_id: ユーザーID
         order_date: 注文日
         order_number: 注文番号
 
@@ -55,8 +64,12 @@ ja:
         purchase_company: 仕入先会社
         order_date: 発注日
         purchase_date: 納入日
+        product_id: 商品ID
 
       order_detail:
+        product_id: 商品ID
+        order_id: 注文ID
+        shipment_status_id: 販売状態
         order_detail_number: 注文番号
         order_quantity: 注文個数
         shipment_date: 発送日
