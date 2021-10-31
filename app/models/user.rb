@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   with_options presence: true do
-    validates :password, format: { with: /\A[a-z0-9]+\z/ }, length: { in: 6..15 }
+    validates :password, format: { with: /\A[a-zA-Z0-9]+\z/ }, length: { in: 6..15 }
     validates :last_name, length: { maximum: 10 }
     validates :first_name, length: { maximum: 10 }
     validates :zipcode, format: { with: /\A\d{3}\d{4}\z/ }, length: { maximum: 8 }
@@ -15,10 +15,4 @@ class User < ApplicationRecord
   has_many :products, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_secure_password
-
-  def self.guest
-    find_or_create_by!(email: 'guest@example.com') do |user|
-      user.password = SecureRandom.urlsafe_base64
-    end
-  end
 end
