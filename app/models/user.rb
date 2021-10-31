@@ -15,4 +15,10 @@ class User < ApplicationRecord
   has_many :products, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_secure_password
+
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
 end
