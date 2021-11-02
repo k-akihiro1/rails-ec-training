@@ -40,34 +40,34 @@
           <p>氏名</p>
           <div class="row ms-2">
             <div class="col-sm-5">
-              <%= form.label :first_name, "姓" %>
-              <%= form.text_field :first_name,maxlength: "10" %>
-              <%= form.label :last_name, "名" %>
-              <%= form.text_field :last_name, maxlength: "10"%>
+              <%= form.label :last_name, "性" %>
+              <%= form.text_field :last_name, maxlength: 10 %>
+              <%= form.label :first_name, "名" %>
+              <%= form.text_field :first_name,maxlength: 10 %>
             </div>
           </div>
           <%= form.label :zipcode, "郵便番号" %>
           <div class="col-sm-6 ms-4">
-            <%= form.text_field :zipcode, length: "7" %>
+            <%= form.text_field :zipcode, length: 8 %>
           </div>
           <div>
             <p class="mb-1">住所</p>
             <div class="ms-4">
               <div class="row">
                 <%= form.label :prefecture, "都道府県" %>
-                <%= form.text_field :prefecture, maxlength: '5' %>
+                <%= form.text_field :prefecture, maxlength:  %>
               </div>
               <div class="row">
                 <%= form.label :municipality, "市町村区" %>
-                <%= form.text_field :municipality, maxlength: '10' %>
+                <%= form.text_field :municipality, maxlength: 10 %>
               </div>
               <div class="row">
                   <%= form.label :address, "番地" %>
-                  <%= form.text_field :address, maxlength: '15' %>
+                  <%= form.text_field :address, maxlength: 15 %>
               </div>
               <div class="row">
                   <%= form.label :apartments, "マンション　部屋番号" %>
-                  <%= form.text_field :apartments, maxlength: '20' %>
+                  <%= form.text_field :apartments, maxlength: 20 %>
               </div>
             </div>
           </div>
