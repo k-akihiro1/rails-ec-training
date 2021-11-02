@@ -15,8 +15,8 @@ class StaticPagesController < ApplicationController
       user.phone_number = "99999999999"
       user.user_classification_id = 1
     end
-    sign_in user
-    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+    log_in(user)
+    redirect_to current_user, notice: 'ゲストユーザーとしてログインしました。'
   end
 
 end
