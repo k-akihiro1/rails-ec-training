@@ -24,12 +24,14 @@
                   <a class="nav-link text-dark" href="#">注文履歴</a>
                   <a class="nav-link text-dark" href="#">ユーザ情報</a>
                   <a class="nav-link text-dark" href="#">ログアウト</a>
+                  <a class="nav-link text-dark" href="#">ゲストログイン</a>
                 </ul>
               <% else %>
                 <ul>
                   <li>
                     <a class="text-dark" href="#"> ログイン </a>
                     <a class="text-dark" href="#"> 新規登録 </a>
+                    <a class="text-dark" href="#">ゲストログイン</a>
                   </li>
                 </ul>
               <% end %>
@@ -59,7 +61,7 @@
                 お持ちの方はこちら
               </p>
               <%= link_to "ログイン", login_path, class: "btn btn-primary" %>
-              <%= link_to 'ゲストログイン（閲覧用）', guest_sign_in_path, method: :post %>
+              <%= link_to "ゲストログイン（閲覧用）", guest_login_path, method: :post, class: "btn btn-primary" %>
             </div>
         <% end %>
       </main>
