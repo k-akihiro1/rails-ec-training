@@ -10,6 +10,23 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    @user.user_classification_id = 1
+
+    if @user.save
+      flash[:success] = "ユーザーを登録しました。こちらからログインしてください。"
+      redirect_to login_path
+    else
+      flash[:error] = "登録失敗しました。"
+      render 'new'
+    end
+  end
+
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
@@ -37,7 +54,5 @@ class UsersController < ApplicationController
         :password_confirmation
       )
     end
-
-
 
 end
