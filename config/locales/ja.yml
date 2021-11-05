@@ -73,3 +73,17 @@ ja:
         order_detail_number: 注文番号
         order_quantity: 注文個数
         shipment_date: 発送日
+
+  attributes:
+      user: ユーザー
+      user_classification: ユーザー種別
+      product: 商品
+      product_status: 商品状態
+      sale_status: 販売状態
+      shipment_status: 発送状態
+      category: カテゴリー
+      order: 注文
+      purchase: 仕入
+      order_detail: 注文詳細
+      create_at: 作成日
+      update_at: 更新日
