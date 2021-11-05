@@ -21,4 +21,20 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  private
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "ログインしてください。"
+        redirect_to login_url
+      end
+    end
+
+    def correct_user
+      user = User.find(params[:id])
+      unless current_user?(user)
+        redirect_to root_path
+        flash[:danger] = "他人の情報にアクセスすることはできません。。"
+      end
+    end
 end

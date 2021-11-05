@@ -1,10 +1,30 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:edit, :show]
+  before_action :correct_user,   only: [:edit, :show]
+
   def edit
     @user = User.find(params[:id])
   end
 
   def show
     @user = User.find_by(id: params[:id])
+  end
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    @user.user_classification_id = 1
+
+    if @user.save
+      flash[:success] = "ユーザーを登録しました。こちらからログインしてください。"
+      redirect_to login_path
+    else
+      flash[:error] = "登録失敗しました。"
+      render 'new'
+    end
   end
 
   def update
@@ -34,7 +54,5 @@ class UsersController < ApplicationController
         :password_confirmation
       )
     end
-
-
 
 end
