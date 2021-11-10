@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :show]
   before_action :correct_user,   only: [:edit, :show]
+  before_action :ensure_normal_user, only: %i[update destroy]
 
   def edit
     @user = User.find(params[:id])
@@ -35,6 +36,12 @@ class UsersController < ApplicationController
     else
       flash[:error] = "ユーザー情報を更新できませんでした。"
       render :edit
+    end
+  end
+
+  def ensure_normal_user
+    if resource.email == 'guest@example.com'
+      redirect_to root_path, alert: 'ゲストユーザーの更新・削除はできません。'
     end
   end
 
