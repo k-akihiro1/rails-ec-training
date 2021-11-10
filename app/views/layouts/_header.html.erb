@@ -14,7 +14,7 @@
             <a class="nav-link text-dark" href="#">カート</a>
             <a class="nav-link text-dark" href="#">注文履歴</a>
             <%= link_to "ユーザ情報", users_path, method: :show,class: "nav-link text-dark" %>
-            <%= link_to "ログアウト",logout_path, class: "nav-link text-dark" %>
+            <%= link_to "ログアウト",logout_path, {method: :post, class: "nav-link text-dark"} %>
           </ul>
         <% else %>
           <ul>
