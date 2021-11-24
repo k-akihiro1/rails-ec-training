@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   with_options presence: true do
-    validates :password, format: { with: /\A[a-z0-9]+\z/ }, length: { in: 6..15 }
+    validates :password, format: { with: /\A[a-zA-Z0-9]+\z/ }, length: { in: 6..15 }
     validates :last_name, length: { maximum: 10 }
     validates :first_name, length: { maximum: 10 }
     validates :zipcode, format: { with: /\A\d{3}\d{4}\z/ }, length: { maximum: 8 }
