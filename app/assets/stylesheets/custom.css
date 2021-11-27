@@ -2,9 +2,9 @@
 * {
   margin: 0;
   padding: 0;
-  }
+}
 
-  body {
+body {
   display: flex;
   /*フッターをウィンドウの最下部に常に表示させるために */
   flex-flow: column;
@@ -26,50 +26,50 @@
   sans-serif;
   }
 
-  header {
+header {
   background-color: #ffe040;
   z-index: 10;
   /* 要素の重なり順序指定 */
-  }
+}
 
-  header h1 {
+header h1 {
   font-weight: bold;
-  }
+}
 
-  header a {
+header a {
   font-weight: bold;
   padding-left: 8px;
-  }
+}
 
-  header p {
+header p {
   text-align: right;
-  }
+}
 
-  header li {
+header li {
   list-style: none;
-  }
+}
 
-  main {
+main {
   background: #ffffff;
   flex: 1;
   /* header footerの高さを除いた、残りの部分がmainで埋まる */
-  }
+}
 
-  footer {
+footer {
   width: 100%;
   background-color: #ffe040;
   position: absolute;
   bottom: 0;
-  }
+}
 
-  footer h1 {
+footer h1 {
   font-size: 15px;
   font-weight: bold;
   margin: 8px 5px;
-  }
+}
 
-  footer p {
+footer p {
   text-align: right;
   font-weight: lighter;
   margin: 0 auto;
-  }
+}
